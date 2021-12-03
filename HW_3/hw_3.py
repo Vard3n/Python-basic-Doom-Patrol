@@ -155,3 +155,24 @@ list_A = [2, 3, 4]
 list_B = [5, 6, 7]
 Up_number = list(map(lambda x, y: x+y, list_A, list_B))
 print(Up_number)
+
+#24
+from functools import reduce
+foo = reduce(lambda x,y: x+y, lst_to_sort)
+print(foo)
+
+#25
+filtered_list = list(filter(lambda x: (x % 2 == 1), lst_to_sort))
+print(filtered_list)
+
+#26
+b = range(-10, 10)
+new_num = list(filter(lambda x: x < 0, b))
+print(new_num)
+
+#27
+list_1 = [1,2,3,5,7,9]
+list_2 = [2,3,5,6,7,8]
+
+list_3 = list(filter(lambda x: x in list_1, list_2))
+print(list_3)
