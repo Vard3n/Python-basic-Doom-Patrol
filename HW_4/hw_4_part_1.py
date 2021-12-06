@@ -73,15 +73,17 @@ class City:
         self.name = name
         self.population = population
 
-    def population_check(self):
+    def __call__(self):
         if self.population < 1500:
-            print("Your city is too small")
+            print(f"Your city {self.name} is too small")
         else:
             print("Big City Life")
 
-Some_City = City('Pythonville', 500 )
-Some_City.population_check()
+Some_city = City('Pythonvile', 550)
+My_city = City('Lviv', 1000000)
 
-My_City = City('Lviv', 1000000)
-My_City.population_check()
+all_cities= (Some_city, My_city)
+
+for population_check in all_cities:
+    population_check()
 
