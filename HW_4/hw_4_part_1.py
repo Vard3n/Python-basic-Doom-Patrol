@@ -2,14 +2,17 @@
 class Vehicle:
     car_type = 'usual car'
 
-    def __init__(self, max_speed, mileage, capacity):
+    def __init__(self, max_speed, mileage):
         self.max_speed = max_speed
         self.mileage = mileage
-        self.capacity = capacity
+
 
 
 # 2
 class Bus(Vehicle):
+    def __init__(self, max_speed, mileage, capacity):
+        super().__init__(max_speed,mileage)
+        self.capacity = capacity
 
     def seating_capacity(self):
         print(f'Bus contains {self.capacity} seats')
